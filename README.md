@@ -8,15 +8,15 @@ This project showcases how to integrate Zustand, a lightweight state management 
 
 ### Features
 
-~ Add books with details like ID, name, and author.
-~ Display a list of books with options to issue or return each book.
-~ Persist book list state using local storage.
+- Add books with details like ID, name, and author.
+- Display a list of books with options to issue or return each book.
+- Persist book list state using local storage.
 
 ### Technologies Used
 
-~ ReactJS
-~ Zustand
-~ Bootstrap
+- ReactJS
+- Zustand
+- Bootstrap
 
 ### Zustand Documentation
 
