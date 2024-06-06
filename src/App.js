@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import BookForm from "./components/BookForm";
+import BookList from "./components/BookList";
+import useBookStore from "./bookStore";
+import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const reset = useBookStore((state) => state.reset);
+
+  useEffect(() => {
+    reset();
+  }, [reset]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2 className="mt-4">My Library Store</h2>
+      <BookForm />
+      <BookList />
     </div>
   );
 }
